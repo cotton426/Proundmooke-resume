@@ -1,6 +1,8 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Stack, Text, Switch, useColorMode } from "@chakra-ui/react";
 
 export function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Stack
       width="100%"
@@ -9,12 +11,15 @@ export function Navbar() {
       align="center"
       height="125px"
       background="white"
+      position="sticky"
+      top="0"
+      zIndex="10"
     >
       <Text
         fontFamily="Inter"
         lineHeight="1"
         fontWeight="extrabold"
-        fontSize="1.2rem"
+        fontSize="2rem"
         letterSpacing="-0.04em"
         textTransform="uppercase"
         color="black"
@@ -39,7 +44,7 @@ export function Navbar() {
           <Text
             fontFamily="Inter"
             fontWeight="semibold"
-            fontSize="1rem"
+            fontSize="1.6rem"
             letterSpacing="0.14em"
             color="black"
           >
@@ -49,7 +54,7 @@ export function Navbar() {
         <Text
           fontFamily="Inter"
           fontWeight="semibold"
-          fontSize="1rem"
+          fontSize="1.6rem"
           letterSpacing="0.14em"
           color="black"
         >
@@ -58,7 +63,7 @@ export function Navbar() {
         <Text
           fontFamily="Inter"
           fontWeight="semibold"
-          fontSize="1rem"
+          fontSize="1.6rem"
           letterSpacing="0.14em"
           color="black"
         >
@@ -67,12 +72,13 @@ export function Navbar() {
         <Text
           fontFamily="Inter"
           fontWeight="semibold"
-          fontSize="1rem"
+          fontSize="1.6rem"
           letterSpacing="0.14em"
           color="black"
         >
           CONTACT
         </Text>
+        <Switch isChecked={colorMode === "dark"} onChange={toggleColorMode} />
       </Stack>
     </Stack>
   );

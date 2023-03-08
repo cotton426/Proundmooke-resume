@@ -1,13 +1,13 @@
 import { Stack, Box, Text, Button, Image } from "@chakra-ui/react";
 
-export function Title() {
+export function Home() {
   return (
     <Stack
       width="100vw"
       justify="flex-start"
       align="flex-start"
       spacing="10px"
-      height="2321px"
+      height="1200px"
       background="#F0EEED"
     >
       <Stack
@@ -46,7 +46,7 @@ export function Title() {
             fontFamily="Inter"
             lineHeight="1.51"
             fontWeight="regular"
-            fontSize="21px"
+            fontSize="2rem"
             color="#000000"
             width="650px"
             maxWidth="100%"
@@ -55,12 +55,7 @@ export function Title() {
             beautiful problem solving in mind.
           </Text>
 
-          <Box>
-            <Box />
-            <Box />
-            <Box />
-            <Box />
-          </Box>
+         
 
           <Button>Download CV</Button>
         </Stack>
